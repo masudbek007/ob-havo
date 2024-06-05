@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dunyo Ob-havo Ma'lumoti</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <style>
+    .bg-gradient {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+    }
+    .weather-card {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 8px 0;
+      color: #333;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .weather-card:hover {
+      transform: scale(1.05);
+    }
+    .weather-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    .weather-icon {
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body class="bg-gradient text-white">
+  <header class="bg-blue-900 bg-opacity-75 p-4">
+    <h1 class="text-3xl font-bold text-center">Dunyo Ob-havo Ma'lumoti</h1>
+  </header>
+  <main class="container mx-auto p-4">
+    <div class="mb-4 flex items-center">
+      <input id="search-input" type="text" placeholder="Joy nomini kiriting" class="p-2 rounded text-black flex-grow outline-none">
+      <button id="search-button" class="ml-2 p-2 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded">Izlash</button>
+    </div>
+    <div id="weather-details" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    </div>
+    <div id="search-history" class="mt-8">
+      <h2 class="text-2xl mb-4">Izlatilgan Joylar</h2>
+      <div id="history-details" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+      </div>
+    </div>
+  </main>
+  <footer class="bg-blue-900 bg-opacity-75 p-4 mt-8 text-center">
+    <p>&copy; 2024 Dunyo Ob-havo</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
